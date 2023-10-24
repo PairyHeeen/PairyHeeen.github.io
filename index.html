@@ -1,11 +1,48 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spinner</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Test Test</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam blanditiis ut dolore ea voluptatibus rem illum id mollitia adipisci facere reiciendis saepe vero laudantium ipsum, totam quibusdam molestias quisquam ullam?</p>
+    <div class="container">
+        <div class="spinButton"><span>Spin</span></div>
+        <div class="wheel">
+            <div class="number" style="--i:1;--clr: #ff340f;">
+                <span>1</span>
+            </div>>
+            <div class="number" style="--i:2;--clr: #db7093;">
+                <span>2</span>
+            </div>>
+            <div class="number" style="--i:3;--clr: #20b2aa;">
+                <span>3</span>
+            </div>>
+            <div class="number" style="--i:4;--clr: #3cb371;">
+                <span>4</span>
+            </div>>
+            <div class="number" style="--i:5;--clr: #4169e1;">
+                <span>5</span>
+            </div>>
+            <div class="number" style="--i:6;--clr: #daa520;">
+                <span>6</span>
+            </div>>
+            <div class="number" style="--i:7;--clr: #d63e92;">
+                <span>7</span>
+            </div>>
+            <div class="number" style="--i:8;--clr: #ff7f50;">
+                <span>8</span>
+            </div>>
+        </div>
+    </div>
+    <script>
+        let wheel = document.querySelector('.wheel');
+        let spinBtn = document.querySelector('.spinBtn');
+        let value = Math.ceil(Math.random() * 3600);
+
+        spinBtn.onclick = function(){
+            wheel.style.transform = "rotate(" + value + "deg)";
+            value += Math.ceil(Math.random() * 3600);
+        }
+    </script>
 </body>
 </html>
