@@ -6,7 +6,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="spinButton"><span>Spin</span></div>
+        <div class="spinButton"></div>
+        <div class="spinButtonSmall"><span>Spin</span></div>
         <div class="wheel">
             <div class="number" style="--i:1;--clr: #ff340f;">
                 <span>1</span>
@@ -36,7 +37,7 @@
     </div>
     <script>
         let wheel = document.querySelector('.wheel');
-        let spinButton = document.querySelector('.spinButton');
+        let spinButton = document.querySelector('.spinButtonSmall');
         let value = Math.ceil(Math.random() * 3600);
 
         spinButton.onclick = function(){
